@@ -18,7 +18,7 @@ Printing times is annoying, so this is me thinking about it once and hopefully n
 
 ## examples
 
-The exported function takes a `time` in nanoseconds, an optional precision integer and returns a string. The default precision is `3` decimal places, and prints units up to hours.
+The exported function takes a `time` in nanoseconds, an optional precision integer and returns a string. The default precision is `3` decimal places, and the maximum unit is hours.
 
 ```javascript
 const pretty = require("atlas-pretty-time");
