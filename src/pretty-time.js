@@ -1,8 +1,12 @@
-const { isNum, getAscendingUnits } = require("./util")
+const { isNum } = require("./util")
 
-const possibleScales = {us: 1e3, ms: 1e6, sec: 1e9, min: 6e10, hr: 36e11}
-
-const units = getAscendingUnits(possibleScales)
+const units = [
+  {unit: "us", factor: 1e3},
+  {unit: "ms", factor: 1e6},
+  {unit: "sec", factor: 1e9},
+  {unit: "min", factor: 6e10},
+  {unit: "hr", factor: 36e11}
+]
 
 module.exports = (time, precision=3) => {
   if (!isNum(time)) 
