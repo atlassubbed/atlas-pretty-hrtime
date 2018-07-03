@@ -45,6 +45,8 @@ describe("package", function(){
           expect(pretty).to.equal(expected)
         })
       })
+      // edge case:
+      //   "1.000s" is preferred to "1000.000ms", etc. 
       if (scale.unit !== "hr"){
         const { factor: nextLargestFactor, unit: nextLargestUnit } = scales[i+1];
         it(`should format in ${nextLargestUnit} if rounded time ~ O(${nextLargestUnit})`, function(){
